@@ -39,7 +39,7 @@ describe('Basic user flow for Website', () => {
     // Right now this function is only checking the first <product-item> it found, make it so that
     // it checks every <product-item> it found
     for (let i = 1; i < prodItems.length; i++) {
-      console.log(`Checking product item ${i+1}/${prodItems.length}`);
+      //console.log(`Checking product item ${i+1}/${prodItems.length}`);
       data = await prodItems[i].getProperty('data');
       plainValue = await data.jsonValue();
       if (plainValue.title.length == 0) { allArePopulated = false; }
@@ -79,7 +79,7 @@ describe('Basic user flow for Website', () => {
     // Check to see if the innerText of #cart-count is 20
     let productElements = await page.$$('product-item');
     for (let i = 1; i < productElements.length; i++) {
-      console.log(`Checking product item ${i+1}/${productElements.length}`);
+      //console.log(`Checking product item ${i+1}/${productElements.length}`);
       const productRoot = await productElements[i].getProperty('shadowRoot');
       let productButton = await productRoot.$('button');
       await productButton.click();
@@ -103,7 +103,7 @@ describe('Basic user flow for Website', () => {
     await page.reload();
     let productElements = await page.$$('product-item');
     for (let i = 0; i < productElements.length; i++) {
-      console.log(`Checking product item ${i+1}/${productElements.length}`);
+      //console.log(`Checking product item ${i+1}/${productElements.length}`);
       const productRoot = await productElements[i].getProperty('shadowRoot');
       let productButton = await productRoot.$('button');
       let productInnerText = await productButton.getProperty('innerText');
@@ -134,7 +134,7 @@ describe('Basic user flow for Website', () => {
     // Once you have, check to make sure that #cart-count is now 0
     let productElements = await page.$$('product-item');
     for (let i = 0; i < productElements.length; i++) {
-      console.log(`Checking product item ${i+1}/${productElements.length}`);
+      //console.log(`Checking product item ${i+1}/${productElements.length}`);
       const productRoot = await productElements[i].getProperty('shadowRoot');
       let productButton = await productRoot.$('button');
       await productButton.click();
@@ -158,7 +158,7 @@ describe('Basic user flow for Website', () => {
     await page.reload();
     let productElements = await page.$$('product-item');
     for (let i = 0; i < productElements.length; i++) {
-      console.log(`Checking product item ${i+1}/${productElements.length}`);
+      //console.log(`Checking product item ${i+1}/${productElements.length}`);
       const productRoot = await productElements[i].getProperty('shadowRoot');
       let productButton = await productRoot.$('button');
       let productInnerText = await productButton.getProperty('innerText');
