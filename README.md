@@ -2,8 +2,6 @@
 
 ## Christopher Hashim
 
-## GitHub Pages Link: 
-
 ## Questions:
 
 ### 1. Within a GitHub action that runs whenever code is pushed. Although you would ideally test your code locally first before you push it to the repository, prioritizing putting unit tests at this stage would ensure that no matter what, there is some kind of test that is run on your code to make sure it is actually working before you push. In the Recipe project example, this would serve as a buffer to make sure you don't push code that makes the website crash or has any other catastrophic bug that could significantly impact the end-user.
